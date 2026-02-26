@@ -81,7 +81,7 @@ export default function Home() {
       // Using Formspree for form handling on static sites
       // Replace YOUR_FORM_ID with your actual Formspree form ID
       // Get your form ID at: https://formspree.io/
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/xykdobve", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
