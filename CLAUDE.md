@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website with a Next.js frontend (static export for GitHub Pages) and a Go backend API.
+Personal portfolio website with a Next.js frontend (static export for GitHub Pages) and a Go backend API. Currently styled with Apple-inspired design.
 
 ## Commands
 
@@ -32,11 +32,15 @@ Environment variables (backend):
 
 ### Frontend (`frontend/`)
 - **Framework**: Next.js 16 with App Router
-- **Styling**: Tailwind CSS 4 with shadcn/ui components
+- **Styling**: Tailwind CSS 4 with Apple-inspired design
+  - Clean white backgrounds (#fbfbfd)
+  - Apple blue accent (#0071e3)
+  - Glassmorphism navigation with backdrop-blur-2xl + saturate-150
+  - Large border-radius (2xl) and subtle shadows
 - **Output**: Static export (`output: 'export'`) for GitHub Pages deployment
 - **Key files**:
-  - `src/app/page.tsx` - Main homepage with hero, skills, projects, contact form
-  - `src/app/about/page.tsx` - About page with experience, education, values
+  - `src/app/page.tsx` - Main homepage (hero, skills, projects, contact form)
+  - `src/app/about/page.tsx` - About page (experience, education, values)
   - `src/components/ui/` - shadcn/ui components (Button, Card, Badge)
   - `src/hooks/useScrollAnimation.ts` - Scroll reveal animations
   - `next.config.ts` - Static export config with basePath for GitHub Pages
@@ -55,10 +59,11 @@ Environment variables (backend):
 ### Deployment
 - GitHub Actions workflow: `.github/workflows/deploy.yml`
 - Deploys frontend static files to GitHub Pages on push to main
-- Form handling: Uses Formspree for static deployment (edit `YOUR_FORM_ID` in page.tsx)
+- Form handling: Uses Formspree (form ID: `xykdobve`)
 
 ## Key Configuration
 
-- `frontend/next.config.ts`: basePath must match your GitHub repo name for proper asset loading
-- Contact form in `frontend/src/app/page.tsx`: Replace `YOUR_FORM_ID` with your Formspree form ID
-- Update personal info (name, skills, projects, contact) in `page.tsx` and `about/page.tsx`
+- `frontend/next.config.ts`: basePath is set to `/personal-portfolio`
+- Update personal info (name, skills, projects, contact) in:
+  - `frontend/src/app/page.tsx`
+  - `frontend/src/app/about/page.tsx`
