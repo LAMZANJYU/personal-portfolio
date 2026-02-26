@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#fbfbfd] dark:bg-black">
       {/* Navigation - Apple style glass */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-black/5 dark:border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff]/70 dark:bg-[#000000]/70 backdrop-blur-2xl saturate-150 border-b border-white/20 dark:border-white/10 shadow-[0_1px_0_rgba(0,0,0,0.05)]">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <div className="flex justify-between items-center h-14">
             <span className="text-[15px] font-semibold tracking-tight">
