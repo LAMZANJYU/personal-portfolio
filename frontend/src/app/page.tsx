@@ -8,6 +8,12 @@ import { Github, Linkedin, Mail, MapPin, Phone, Send, ExternalLink, Download, Me
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState } from "react";
 
+// Apple-style reveal animation
+const reveal = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+};
+
 export default function Home() {
   const skills = {
     frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
@@ -97,10 +103,10 @@ export default function Home() {
     }
   };
 
-  const heroRef = useScrollAnimation();
-  const skillsRef = useScrollAnimation();
-  const projectsRef = useScrollAnimation();
-  const contactRef = useScrollAnimation();
+  const heroRef = useScrollAnimation({ delay: 0 });
+  const skillsRef = useScrollAnimation({ delay: 100 });
+  const projectsRef = useScrollAnimation({ delay: 200 });
+  const contactRef = useScrollAnimation({ delay: 300 });
 
   return (
     <div className="min-h-screen bg-[#fbfbfd] dark:bg-black">
@@ -194,7 +200,7 @@ export default function Home() {
         <section
           ref={heroRef.ref}
           id="about"
-          className={`py-16 md:py-24 text-center transition-all duration-700 ${
+          className={`py-16 md:py-24 text-center transition-all duration-1000 ease-out ${
             heroRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -217,7 +223,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             <Button
               size="lg"
-              className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 h-11 text-[15px]"
+              className="bg-[#0071e3] hover:bg-[#0077ed] hover:scale-[1.02] active:scale-[0.98] text-white rounded-full px-6 h-11 text-[15px] shadow-lg shadow-[#0071e3]/25 hover:shadow-xl hover:shadow-[#0071e3]/30 transition-all duration-200"
               asChild
             >
               <a href="#contact" className="flex items-center gap-2">
@@ -260,7 +266,7 @@ export default function Home() {
         <section
           ref={skillsRef.ref}
           id="skills"
-          className={`py-16 md:py-24 transition-all duration-700 ${
+          className={`py-16 md:py-24 transition-all duration-1000 ease-out delay-100 ${
             skillsRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -274,7 +280,7 @@ export default function Home() {
             {Object.entries(skills).map(([category, items]) => (
               <Card
                 key={category}
-                className="bg-white dark:bg-[#1d1d1f] border-0 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_2px_8px_rgba(255,255,255,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_8px_24px_rgba(255,255,255,0.08)] transition-all duration-300"
+                className="bg-white dark:bg-[#1d1d1f] border-0 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_2px_8px_rgba(255,255,255,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_8px_24px_rgba(255,255,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out"
               >
                 <CardHeader className="pb-2">
                   <CardTitle className="capitalize text-[15px] font-medium text-[#1d1d1f] dark:text-white">
@@ -303,7 +309,7 @@ export default function Home() {
         <section
           ref={projectsRef.ref}
           id="projects"
-          className={`py-16 md:py-24 transition-all duration-700 ${
+          className={`py-16 md:py-24 transition-all duration-1000 ease-out delay-200 ${
             projectsRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -355,7 +361,7 @@ export default function Home() {
         <section
           ref={contactRef.ref}
           id="contact"
-          className={`py-16 md:py-24 transition-all duration-700 ${
+          className={`py-16 md:py-24 transition-all duration-1000 ease-out delay-300 ${
             contactRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
