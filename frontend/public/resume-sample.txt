@@ -1,0 +1,50 @@
+YOUR NAME
+Full Stack Developer
+================================
+
+CONTACT
+-------
+Email: your.email@example.com
+Phone: +86 123 4567 8900
+Location: China
+LinkedIn: linkedin.com/in/yourusername
+GitHub: github.com/yourusername
+
+SUMMARY
+-------
+Passionate full-stack developer with 5+ years of experience building scalable web applications.
+Expert in modern JavaScript frameworks, cloud technologies, and agile development practices.
+
+SKILLS
+------
+Languages: JavaScript, TypeScript, Go, Python, SQL
+Frontend: React, Next.js, Vue.js, Tailwind CSS
+Backend: Node.js, Go, Gin, Express
+Databases: PostgreSQL, MongoDB, Redis
+Cloud: AWS, GCP, Docker, Kubernetes
+Tools: Git, CI/CD, Linux, Figma
+
+EXPERIENCE
+----------
+Senior Full Stack Developer | Tech Company Inc. | 2022 - Present
+- Lead development of microservices architecture serving 100K+ users
+- Implemented CI/CD pipelines reducing deployment time by 60%
+- Mentored junior developers and conducted code reviews
+
+Full Stack Developer | Startup Co. | 2020 - 2022
+- Built and maintained client-facing applications from concept to deployment
+- Integrated payment gateways and third-party APIs
+- Optimized database queries improving performance by 40%
+
+Junior Developer | Digital Agency | 2018 - 2020
+- Developed responsive websites for various clients
+- Collaborated with designers to implement pixel-perfect UIs
+- Participated in agile development processes
+
+EDUCATION
+---------
+Bachelor of Science in Computer Science
+University Name | 2014 - 2018
+
+Full Stack Web Development Bootcamp
+Tech Academy | 2018
